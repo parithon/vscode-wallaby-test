@@ -1,0 +1,46 @@
+{
+	"name": "vscode-wallaby-test",
+	"displayName": "vscode-wallaby-test",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "wallabyTest.highlight",
+				"title": "Highlight Line",
+				"category": "Line Highlighter"
+			},
+			{
+				"command": "wallabyTest.unhighlight",
+				"title": "Unhighlight Line",
+				"category": "Line Highlighter"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.7",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"chai": "^4.2.0",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	}
+}
